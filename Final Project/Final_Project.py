@@ -70,7 +70,10 @@ for questionIdx in range(len(QA_pairs)):
 	if userAnswer == "exit":
 		break
 
-	# Check if answer is correct.
+	## Check if answer is correct.
+	
+	# Not using .lower() or like anything for case sensitivity.
+	# Answers are already capitalized while creating the dictionary, so I'm expecting competitor to capitalize their words.
 	if userAnswer == currentQA["answer"]:
 		print("[+] Your answer is correct! You got %d points." % (everyQuestionPoint))
 		totalPoints += everyQuestionPoint
