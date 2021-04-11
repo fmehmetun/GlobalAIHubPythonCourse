@@ -13,18 +13,23 @@ secondHalf = myList[halfPoint:]
 # Concatenate halves to create final swapped list
 mySwappedList = (secondHalf + firstHalf)
 
-print("Original list: ", myList)
-print("Halves swapped: ", mySwappedList)
+print("[*] Original list: ", myList)
+print("[*] Halves swapped: ", mySwappedList)
 
 ## 2 - Get single digit from user. Then through 0 to n print out even numbers.
 
-# Get input and check if single digit given
-n = int(input("Enter a single digit integer: "))
-if (len(str(n)) == 1):
-	# n+1 for including n
-	for i in range(0, n+1):
-		# Check if even
-		if i%2 == 0:
-			print(i)
-else:
-	print("This is not a single digit integer.")
+# Infinite loop until done.
+while True:
+	# Get input and check if single digit given
+	n = int(input("[?] Enter a single digit integer: "))
+	if (len(str(n)) == 1):
+		# n+1 for including n
+		for i in range(0, n+1):
+			# Check if even
+			if i%2 == 0:
+				print(i)
+
+		# Done, break the loop.
+		break
+	else:
+		print("[!] This is not a single digit integer.")
